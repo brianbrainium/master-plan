@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/master-plan/" />
+    <script>
+      const basePath = '/master-plan/'
+      const currentPath = window.location.pathname.startsWith(basePath)
+        ? window.location.pathname.slice(basePath.length)
+        : ''
+      const normalizedPath = currentPath.replace(/^\/+/, '')
+      const query = window.location.search ?? ''
+      const hash = normalizedPath ? `#/${normalizedPath}` : '#/'
+
+      window.location.replace(`${window.location.origin}${basePath}${query}${hash}`)
+    </script>
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to the project dashboard…</p>
+  </body>
+</html>
