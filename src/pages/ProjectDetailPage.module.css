@@ -1,0 +1,200 @@
+.page {
+  display: grid;
+  gap: 20px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 2px solid var(--line);
+  background: rgba(255, 250, 241, 0.92);
+  box-shadow: var(--shadow);
+  font-size: 0.84rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero,
+.summaryStrip,
+.phasePanel,
+.panel,
+.notFound {
+  border: 2px solid var(--line);
+  background: rgba(244, 239, 228, 0.95);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  padding: 26px;
+}
+
+.heroPrimary h2 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 18px 0 0;
+  max-width: 58ch;
+}
+
+.heroMeta {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.heroMeta div,
+.summaryStrip article {
+  display: grid;
+  gap: 8px;
+}
+
+.heroMeta span,
+.summaryStrip span {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroMeta strong,
+.summaryStrip strong {
+  font-size: 1rem;
+}
+
+.summaryStrip {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 18px;
+}
+
+.phasePanel,
+.panel,
+.notFound {
+  padding: 24px;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sectionHeading h3 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.detailGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+  align-items: start;
+}
+
+.infoColumn {
+  display: grid;
+  gap: 20px;
+}
+
+.milestones,
+.teamList,
+.blockerList {
+  display: grid;
+  gap: 12px;
+}
+
+.milestoneCard,
+.teamMember,
+.blocker {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 2px solid var(--line);
+  background: #fffaf1;
+}
+
+.milestoneCard span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 8px;
+  background: rgba(31, 79, 216, 0.08);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.milestoneCard strong,
+.teamMember strong {
+  font-size: 1rem;
+}
+
+.milestoneCard p,
+.teamMember span {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.alertStrip {
+  margin-bottom: 12px;
+  padding: 16px;
+  border-left: 8px solid var(--red);
+  background: rgba(207, 58, 43, 0.08);
+  font-size: 1rem;
+}
+
+.notFound {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}
+
+.notFound h2 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.1rem;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1120px) {
+  .hero,
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .summaryStrip {
+    grid-template-columns: 1fr;
+  }
+}

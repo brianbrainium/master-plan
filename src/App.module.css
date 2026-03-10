@@ -1,0 +1,165 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 28px;
+}
+
+.backdrop {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.96;
+}
+
+.redCircle {
+  top: 58px;
+  right: min(5vw, 72px);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.blueSquare {
+  left: -48px;
+  top: 240px;
+  width: 180px;
+  height: 180px;
+  background: var(--blue);
+  transform: rotate(12deg);
+}
+
+.yellowBar {
+  bottom: 88px;
+  right: 12vw;
+  width: 320px;
+  height: 86px;
+  background: var(--yellow);
+  transform: rotate(-8deg);
+}
+
+.axisLine {
+  position: absolute;
+  left: 52%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(16, 16, 16, 0.1);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  align-items: end;
+  z-index: 1;
+}
+
+.brand,
+.manifesto {
+  border: 2px solid var(--line);
+  background: rgba(244, 239, 228, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  padding: 28px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-size: 0.84rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.brand h1 {
+  margin: 0;
+  max-width: 10ch;
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.summary {
+  margin: 18px 0 0;
+  max-width: 56ch;
+  font-size: 1rem;
+}
+
+.manifesto {
+  align-self: stretch;
+  display: grid;
+  gap: 18px;
+  align-content: end;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, transparent 0 55%, rgba(16, 16, 16, 0.05) 55% 100%),
+    rgba(244, 239, 228, 0.94);
+}
+
+.manifestoLabel {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.manifesto p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.main {
+  position: relative;
+  margin-top: 26px;
+  z-index: 1;
+}
+
+@media (max-width: 980px) {
+  .shell {
+    padding: 18px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .brand h1 {
+    max-width: none;
+  }
+
+  .axisLine {
+    left: 76%;
+  }
+}
+
+@media (max-width: 720px) {
+  .redCircle {
+    width: 124px;
+    height: 124px;
+  }
+
+  .blueSquare {
+    width: 124px;
+    height: 124px;
+    top: 300px;
+  }
+
+  .yellowBar {
+    width: 220px;
+    height: 68px;
+    right: -20px;
+  }
+}

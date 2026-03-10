@@ -1,0 +1,71 @@
+.rail {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.phase {
+  display: grid;
+  gap: 16px;
+  min-height: 112px;
+  padding: 16px;
+  border: 2px solid var(--line);
+  background: #fffaf1;
+}
+
+.index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.phase p,
+.phase span {
+  margin: 0;
+}
+
+.phase p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.phase div {
+  display: grid;
+  gap: 8px;
+}
+
+.phase div span {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.complete {
+  background: rgba(31, 79, 216, 0.08);
+}
+
+.current {
+  background: rgba(245, 197, 17, 0.22);
+}
+
+.upcoming {
+  opacity: 0.76;
+}
+
+@media (max-width: 1180px) {
+  .rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .rail {
+    grid-template-columns: 1fr;
+  }
+}

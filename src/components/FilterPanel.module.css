@@ -1,0 +1,66 @@
+.panel {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border: 2px solid var(--line);
+  background: rgba(244, 239, 228, 0.95);
+  box-shadow: var(--shadow);
+}
+
+.headingBlock {
+  padding: 2px 0 10px;
+  border-bottom: 2px solid var(--line);
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.headingBlock h2 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.95rem;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: 2px solid var(--line);
+  background: #fffaf1;
+  padding: 12px 14px;
+  min-height: 48px;
+}
+
+.resetButton {
+  min-height: 50px;
+  border: 2px solid var(--line);
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.note {
+  margin: 0;
+  padding: 14px;
+  border-left: 6px solid var(--red);
+  background: rgba(207, 58, 43, 0.08);
+  font-size: 0.94rem;
+}

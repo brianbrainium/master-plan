@@ -1,0 +1,124 @@
+.card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 2px solid var(--line);
+  background: rgba(255, 250, 241, 0.96);
+  box-shadow: var(--shadow);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+}
+
+.selected {
+  background: rgba(31, 79, 216, 0.08);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+
+.typology,
+.health {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.health {
+  font-weight: 700;
+}
+
+.ontrack {
+  background: rgba(31, 79, 216, 0.12);
+}
+
+.watch {
+  background: rgba(245, 197, 17, 0.22);
+}
+
+.atrisk {
+  background: rgba(207, 58, 43, 0.18);
+}
+
+.identity h3 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.identity p {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+}
+
+.metaGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metaGrid div {
+  display: grid;
+  gap: 6px;
+}
+
+.metaLabel {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.metaGrid strong {
+  font-size: 0.98rem;
+}
+
+.progressBlock {
+  display: grid;
+  gap: 10px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.progressTrack {
+  height: 16px;
+  border: 2px solid var(--line);
+  background: #ede1cf;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--yellow), var(--blue));
+}
+
+.nextAction {
+  margin: 0;
+  padding-left: 14px;
+  border-left: 6px solid var(--blue);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 640px) {
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+}

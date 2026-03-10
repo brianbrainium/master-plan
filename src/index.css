@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #101010;
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 64px), rgba(16, 16, 16, 0.08) calc(100% - 64px), rgba(16, 16, 16, 0.08) 100%),
+    linear-gradient(180deg, transparent 0, transparent calc(100% - 64px), rgba(16, 16, 16, 0.08) calc(100% - 64px), rgba(16, 16, 16, 0.08) 100%),
+    #f4efe4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --paper: #f4efe4;
+  --ink: #101010;
+  --line: #101010;
+  --red: #cf3a2b;
+  --blue: #1f4fd8;
+  --yellow: #f5c511;
+  --sand: #e5d9c8;
+  --soft: rgba(16, 16, 16, 0.08);
+  --shadow: 10px 10px 0 rgba(16, 16, 16, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}

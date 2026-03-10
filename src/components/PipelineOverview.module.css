@@ -1,0 +1,125 @@
+.panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border: 2px solid var(--line);
+  background: rgba(244, 239, 228, 0.95);
+  box-shadow: var(--shadow);
+}
+
+.heading {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: end;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.caption {
+  margin: 0;
+  justify-self: end;
+  max-width: 28ch;
+  font-size: 0.96rem;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.phaseCard {
+  min-height: 186px;
+  padding: 14px;
+  border: 2px solid var(--line);
+  background: #fffaf1;
+}
+
+.phaseTop {
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--line);
+}
+
+.count {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.phaseTop h3 {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.18rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.projectBadge,
+.empty {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.projectBadge {
+  background: rgba(31, 79, 216, 0.08);
+}
+
+.empty {
+  background: rgba(16, 16, 16, 0.04);
+  opacity: 0.72;
+}
+
+@media (max-width: 1180px) {
+  .heading {
+    grid-template-columns: 1fr;
+  }
+
+  .caption {
+    justify-self: start;
+    max-width: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
